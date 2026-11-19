@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Karthikeya Kusuma</title>
 <style>
+
 html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:#1c1c1c;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55}
 a{color:#1a5fb4;text-decoration:none}
@@ -57,41 +58,114 @@ dl{margin:0}
 dt{font-weight:700;margin-top:12px}
 dd{margin:2px 0 0;color:#444;font-size:.97rem}
 footer{margin-top:56px;border-top:1px solid #e2e2e2;padding:18px 0 48px;color:#777;font-size:.9rem}
-@media (max-width:640px){.item{grid-template-columns:1fr}.when{padding:0 0 2px}h1{font-size:2rem}header{padding-top:36px}}
+
+body{-webkit-text-size-adjust:100%;overflow-wrap:break-word}
+.bar{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e2e2;z-index:5}
+.bar .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:8px 28px;flex-wrap:wrap;padding-top:12px;padding-bottom:0}
+.me{font-weight:700;color:#1c1c1c;font-size:1.05rem;white-space:nowrap;padding-bottom:10px}
+.me:hover{text-decoration:none}
+nav ul{display:flex;gap:0 22px;margin:0;padding:0;list-style:none;font-size:.92rem}
+nav{position:static;border:0;padding:0;margin:0}
+nav a{display:block;color:#444;padding:0 0 10px;border-bottom:2px solid transparent;white-space:nowrap}
+nav a:hover{text-decoration:none;color:#1c1c1c}
+nav a.on{color:#1c1c1c;border-bottom-color:#1c1c1c;font-weight:700}
+.page{display:none;padding-top:36px;padding-bottom:20px}
+.page.on{display:block}
+.page h1{font-size:2.4rem;margin:0 0 8px}
+.page h2.pt{font-size:1.6rem;border:0;padding:0;margin:0 0 6px}
+.lead{color:#555;margin:0 0 16px}
+.sub2{font-size:1.1rem;font-weight:700;margin:34px 0 0;padding-bottom:6px;border-bottom:1px solid #1c1c1c}
+.hl{margin:26px 0 0;padding:0;list-style:none;border-top:1px solid #1c1c1c}
+.hl li{border-bottom:1px solid #e2e2e2}
+.hl a{display:grid;grid-template-columns:150px 1fr;gap:0 24px;padding:16px 0;color:#1c1c1c}
+.hl a:hover{text-decoration:none;background:#faf8f0}
+.hl .k{font-weight:700}
+.hl .d{color:#333}
+.hl .go{display:block;color:#1a5fb4;font-size:.88rem;margin-top:3px}
+.hit{background:#f6f4ea}
+.btn{display:inline-block;border:1px solid #1c1c1c;padding:6px 14px;color:#1c1c1c;font-weight:700;margin:2px 14px 6px 0}
+.btn:hover{background:#1c1c1c;color:#fff;text-decoration:none}
+.item[id]{scroll-margin-top:96px}
+@media (max-width:900px){.item{grid-template-columns:120px 1fr;gap:0 18px}}
+@media (max-width:640px){
+.wrap{padding:0 18px}
+.bar .wrap{padding-top:10px}
+.me{padding-bottom:0;width:100%}
+nav{width:calc(100% + 36px);margin:0 -18px}
+nav ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:0 6px;padding:0 12px;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav li{flex:0 0 auto}
+nav a{padding:12px 8px 8px}
+.page{padding-top:26px}
+.page h1{font-size:1.85rem}
+.hl a{grid-template-columns:1fr;gap:2px 0;padding:14px 0}
+.item{grid-template-columns:1fr;padding:18px 0}
+.when{padding:0 0 4px}
+.what p,.pb,details ul{font-size:.95rem}
+.contact a{display:inline-block;margin:0 14px 6px 0;padding:4px 0}
+.sep{display:none}
+.btn{padding:8px 14px}
+footer{margin-top:36px}
+}
 </style>
 </head>
 <body>
+<div class="bar"><div class="wrap">
+  <a class="me" href="#/">Karthikeya Kusuma</a>
+  <nav aria-label="Pages"><ul>
+    <li><a href="#/" data-p="home">Home</a></li>
+    <li><a href="#/computation" data-p="computation">Computation and ML</a></li>
+    <li><a href="#/research" data-p="research">Health research</a></li>
+    <li><a href="#/clinical" data-p="clinical">Clinical</a></li>
+    <li><a href="#/publications" data-p="publications">Publications</a></li>
+    <li><a href="#/involvement" data-p="involvement">Leadership and outreach</a></li>
+    <li><a href="Karthikeya_Kusuma_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+  </ul></nav>
+</div></div>
 <div class="wrap">
-<header id="top">
+
+<main id="p-home" class="page" data-title="Karthikeya Kusuma">
   <h1>Karthikeya Kusuma</h1>
   <p class="tag">I study how molecules behave, and I work in the clinics where that knowledge has to land.</p>
   <p>I'm a junior at the University of Washington studying Biochemistry and Public-Global Health. I build machine-learned models for molecular dynamics, run health research on clinical trial and population data, and work in a neurology clinic. I plan to apply to PhD programs in Autumn 2027.</p>
-  <p class="contact"><a href="mailto:karth@uw.edu">karth@uw.edu</a> &nbsp;/&nbsp; <a href="https://github.com/karth-vader">github</a> &nbsp;/&nbsp; <a href="https://linkedin.com/in/karthikeya-kusuma">linkedin</a> &nbsp;/&nbsp; <a href="https://orcid.org/0009-0002-6812-4299">orcid</a> &nbsp;/&nbsp; Seattle, WA</p>
-</header>
-<nav aria-label="Sections">
-  <ul>
-    <li><a href="#computation">Computation and ML</a></li>
-    <li><a href="#research">Health research</a></li>
-    <li><a href="#clinical">Clinical work</a></li>
-    <li><a href="#outreach">Education and outreach</a></li>
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#talks">Talks</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
+  <p class="contact"><a class="btn" href="Karthikeya_Kusuma_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a><a href="mailto:karth@uw.edu">karth@uw.edu</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://github.com/karth-vader">github</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://linkedin.com/in/karthikeya-kusuma">linkedin</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://orcid.org/0009-0002-6812-4299">orcid</a></p>
+  <ul class="hl">
+    <li><a href="#/clinical"><span class="k">Clinical</span><span class="d">2,000+ hours in a neurology clinic, assisting 15+ neurologists across 1,000+ patients and 200+ neurological exams<span class="go">See clinical work</span></span></a></li>
+    <li><a href="#/computation"><span class="k">Computation and ML</span><span class="d">Machine-learned interatomic potentials at PNNL, a first-author line notation at MIT, and deep learning surrogate models at UW and the Institute for Protein Design<span class="go">See computation and ML</span></span></a></li>
+    <li><a href="#/research"><span class="k">Health research</span><span class="d">Lipidomics from a randomized trial (1,444 lipids, 107+ participants) at Fred Hutch, plus maternal viral load and gun violence data pipelines in R<span class="go">See health research</span></span></a></li>
+    <li><a href="#/publications"><span class="k">Publications</span><span class="d">One paper published in PLOS ONE (2026) and five more in preparation or in progress<span class="go">See publications and talks</span></span></a></li>
+    <li><a href="#/involvement"><span class="k">Leadership</span><span class="d">Co-Director of Education for U-District Street Medicine, leading a team of 40<span class="go">See leadership and outreach</span></span></a></li>
   </ul>
-</nav>
+  <div class="sub2">Education</div>
 
-<p class="key legend"><span class="mk">&#9679;</span> Resulted in a published paper &nbsp;&nbsp; <span class="mk">&#9675;</span> Paper in preparation &nbsp;&nbsp; No symbol: no paper yet. Click an underlined title to jump to its paper in <a href="#publications">Publications</a>.</p>
+  <div class="item"><div class="when">2025 to 2028</div><div class="what"><div class="t">University of Washington, Seattle</div><div class="o">B.S. in Public-Global Health and B.S. in Biochemistry; Minors in Statistics and Applied Mathematics</div><p>Coursework: Biochemistry, Physical Chemistry, Advanced Bio-Organic Chemistry, Organic Chemistry, General Chemistry, General Biology, Calculus-Based Physics, Biostatistics, Graduate Global Health, Graduate Chemistry and Materials Science</p></div></div>
 
-<section id="computation"><h2>Computation and ML</h2><div id="s-computation"></div></section>
-<section id="research"><h2>Health research</h2><div id="s-research"></div></section>
-<section id="clinical"><h2>Clinical work</h2><div id="s-clinical"></div></section>
-<section id="outreach"><h2>Education and outreach</h2><div id="s-outreach"></div></section>
-<section id="leadership"><h2>Communication and leadership</h2><div id="s-leadership"></div></section>
+</main>
 
-<section id="publications"><h2>Publications</h2>
+<main id="p-computation" class="page" data-title="Computation and ML">
+  <h2 class="pt">Computation and ML</h2>
+  <p class="key"><span class="mk">&#9679;</span> Resulted in a published paper &nbsp;&nbsp; <span class="mk">&#9675;</span> Paper in preparation &nbsp;&nbsp; No symbol: no paper yet. Click an underlined title to see its paper in <a href="#/publications">Publications</a>.</p>
+  <div id="s-computation"></div>
+  <div class="sub2">Projects</div>
+  <div id="s-projects"></div>
+</main>
+
+<main id="p-research" class="page" data-title="Health research">
+  <h2 class="pt">Health research</h2>
+  <p class="key"><span class="mk">&#9679;</span> Resulted in a published paper &nbsp;&nbsp; <span class="mk">&#9675;</span> Paper in preparation &nbsp;&nbsp; No symbol: no paper yet. Click an underlined title to see its paper in <a href="#/publications">Publications</a>.</p>
+  <div id="s-research"></div>
+</main>
+
+<main id="p-clinical" class="page" data-title="Clinical">
+  <h2 class="pt">Clinical work</h2>
+  <p class="lead">Ordered by hours.</p>
+  <div id="s-clinical"></div>
+</main>
+
+<main id="p-publications" class="page" data-title="Publications">
+  <h2 class="pt">Publications</h2>
+  <p>Full list on <a href="https://orcid.org/0009-0002-6812-4299">ORCID</a>.</p>
+
   <p>Full list on <a href="https://orcid.org/0009-0002-6812-4299">ORCID</a>.</p>
   <div class="item" id="pub-hpv"><div class="when"><span class="mk">&#9679;</span> Published</div><div class="what"><div class="t"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0360427">HPV Awareness, Vaccination, and Screening Disparities Among Bisexual-Identifying Populations: A Systematic Review</a></div><div class="o">PLOS ONE, 2026. Lawley Lab, UW School of Public Health. doi:10.1371/journal.pone.0360427</div><ul class="pb"><li>Systematic review of HPV awareness, vaccination, and screening disparities among bisexual-identifying populations</li><li>Database searches and eligibility screening across PubMed, CINAHL, and PsycINFO (PROSPERO CRD420251252015)</li></ul></div></div>
   <div class="item" id="pub-lipidome"><div class="when"><span class="mk">&#9675;</span> In preparation</div><div class="what"><div class="t">Combined Fish Oil and Fermentable Fiber Supplementation Substantially Remodel the Circulating Lipidome in a Randomized Trial in Older Healthy Adults</div><div class="o">Lampe Lab, Fred Hutchinson Cancer Center. In prep, 2026</div><ul class="pb"><li>Randomized crossover trial of fish oil and fermentable fiber in older healthy adults, 107+ participants</li><li>Analysis of 1,444 lipids and 372 aqueous metabolites using linear mixed models, PCA, and LDA</li></ul></div></div>
@@ -99,36 +173,26 @@ footer{margin-top:56px;border-top:1px solid #e2e2e2;padding:18px 0 48px;color:#7
   <div class="item" id="pub-biobigsmiles"><div class="when"><span class="mk">&#9675;</span> In progress</div><div class="what"><div class="t">BioBIGSMILES: A Line Notation for Polymers</div><div class="o">Karthikeya Kusuma (first author). Olsen Lab, MIT Chemical Engineering. In progress, 2026</div><ul class="pb"><li>Line notation extending BigSMILES to represent stochastic protein bioconjugate structures in a machine-readable form</li></ul></div></div>
   <div class="item" id="pub-al"><div class="when"><span class="mk">&#9675;</span> In progress</div><div class="what"><div class="t">Al<sup>3+</sup> and Cl<sup>&minus;</sup> Ion Pairing in Water from Machine-Learned Interatomic Potentials (working title)</div><div class="o">Dinpajooh Group, Pacific Northwest National Laboratory. In progress, 2026</div><ul class="pb"><li>Potential of mean force for Al<sup>3+</sup> and Cl<sup>&minus;</sup> ion pairing in water using umbrella sampling and WHAM</li><li>MACE-Polar machine-learned interatomic potentials, benchmarked against a custom-trained model</li></ul></div></div>
   <div class="item" id="pub-employment"><div class="when"><span class="mk">&#9675;</span> In progress</div><div class="what"><div class="t"><a href="employment-anxiety-study.pdf">Employment Status and General Anxiety Among Undergraduate Students: A Cross-Sectional Study</a></div><div class="o">UW School of Public Health. In progress, 2026</div><ul class="pb"><li>Cross-sectional survey of paid work hours and generalized anxiety (GAD-7) among UW undergraduates, n = 81</li><li>Crude and Mantel-Haenszel adjusted prevalence ratios stratified by socioeconomic status</li></ul></div></div>
-</section>
 
-<section id="talks"><h2>Talks</h2>
+  <div class="sub2">Talks</div>
+
   <ul class="list">
     <li><b>BioBIGSMILES: Extending Notation for Biomolecule-Polymer Systems</b><span>MIT Chemical Engineering, 2026</span></li>
     <li><b>Microfluidic Single-Cell Isolation of Circulating Tumor Cells</b><span>UW Materials Science and Engineering, 2026</span></li>
     <li><b>Ceramides and Gut Health</b><span>Fred Hutchinson Cancer Center and Texas A&amp;M, 2026</span></li>
     <li><b>Science-Backed Learning: Bringing Research Sites into Educator Programming at a Nonprofit</b><span>CELEbration, UW CELE, 2026</span></li>
   </ul>
-</section>
 
-<section id="projects"><h2>Projects</h2><div id="s-projects"></div></section>
+</main>
 
-<section id="education"><h2>Education</h2>
-  <div class="item"><div class="when">2025 to 2028</div><div class="what"><div class="t">University of Washington, Seattle</div><div class="o">B.S. in Public-Global Health and B.S. in Biochemistry; Minors in Statistics and Applied Mathematics</div><p>Coursework: Biochemistry, Physical Chemistry, Advanced Bio-Organic Chemistry, Organic Chemistry, General Chemistry, General Biology, Calculus-Based Physics, Biostatistics, Graduate Global Health, Graduate Chemistry and Materials Science</p></div></div>
-</section>
+<main id="p-involvement" class="page" data-title="Leadership and outreach">
+  <h2 class="pt">Education and outreach</h2>
+  <div id="s-outreach"></div>
+  <div class="sub2">Communication and leadership</div>
+  <div id="s-leadership"></div>
+</main>
 
-<section id="skills"><h2>Skills</h2>
-  <dl>
-    <dt>Programming</dt><dd>Python, R, SQL, Git/GitHub, Bash, Linux, Vim</dd>
-    <dt>ML and data science</dt><dd>PyTorch, JAX, scikit-learn, Pandas, NumPy, SciPy, Matplotlib, Plotly, Regression Analysis, Variational Autoencoders, Graph Neural Networks, Equivariant Graph Neural Networks, Machine-Learned Interatomic Potentials, Deep Learning, MLX-LM</dd>
-    <dt>High-performance computing</dt><dd>NERSC Perlmutter (GPU and CPU queues), MLIP training on a supercomputer, MACE, DeePMD-kit</dd>
-    <dt>Computational biology</dt><dd>BioPython, ESMFold, RFdiffusion, ProteinMPNN, PDB Structure Analysis, py3Dmol, SMILES/SELFIES, BigSMILES/BioBIGSMILES</dd>
-    <dt>Simulation</dt><dd>COMSOL CFD, OpenFOAM, Molecular Dynamics (OPLS-AA/AMBER), Lattice Boltzmann Methods, DFT Data Curation</dd>
-    <dt>Research</dt><dd>Linear Mixed Models, Multivariate Classification (PCA, LDA), FDR/Multiple Testing Correction, EHR/EMR Systems, IRB Compliance, Biostatistics, Data Cleaning and Reshaping</dd>
-    <dt>Lab</dt><dd>Perfusions, Stereotaxic Viral Injections, Cranial Implant Surgery, Rat Handling, CRISPR-Cas9, PCR</dd>
-  </dl>
-</section>
-
-<footer>Seattle, WA. <a href="#top">Back to top</a></footer>
+<footer>Seattle, WA. <a href="#/">Home</a> &nbsp;/&nbsp; <a href="Karthikeya_Kusuma_Resume.pdf" target="_blank" rel="noopener">Resume</a></footer>
 </div>
 
 <script>
@@ -226,7 +290,7 @@ function more(a){
   return "<details><summary>"+(a.length-1)+" more</summary><ul>"+a.slice(1).map(function(x){return "<li>"+hl(x)+"</li>";}).join("")+"</ul></details>";
 }
 function title(e){
-  return e.ref?'<a class="tl" href="#'+e.ref+'" title="Go to the publication">'+e.t+'</a>':e.t;
+  return e.ref?'<a class="tl" href="#/publications/'+e.ref+'" title="Go to the publication">'+e.t+'</a>':e.t;
 }
 function mark(e){
   if(e.pub==="pub") return ' <span class="mk" title="Resulted in a published paper">&#9679;</span>';
@@ -236,6 +300,7 @@ function mark(e){
 function body(e){
   return e.b.map(function(x){return "<p>"+hl(x)+"</p>";}).join("");
 }
+
 ["computation","research","clinical","outreach","leadership"].forEach(function(c){
   var out="";
   E.filter(function(e){return e.c===c;}).sort(function(a,b){return c==="clinical"?(b.hrs||0)-(a.hrs||0):0;}).forEach(function(e){
@@ -244,6 +309,21 @@ function body(e){
   document.getElementById("s-"+c).innerHTML=out;
 });
 (function(){var out="";P.forEach(function(p){out+='<div class="item"><div class="when">2026</div><div class="what"><div class="t">'+(p.g?'<a href="'+p.g+'">'+p.t+'</a>':p.t)+'</div><div class="o">'+p.k+'</div><p>'+hl(p.b[0])+'</p></div></div>';});document.getElementById("s-projects").innerHTML=out;})();
+
+var pages=["home","computation","research","clinical","publications","involvement"];
+function route(){
+  var parts=location.hash.replace(/^#\/?/,"").split("/");
+  var p=parts[0]||"home";
+  if(pages.indexOf(p)<0)p="home";
+  pages.forEach(function(n){document.getElementById("p-"+n).classList.toggle("on",n===p);});
+  document.querySelectorAll("nav a[data-p]").forEach(function(a){a.classList.toggle("on",a.getAttribute("data-p")===p);});
+  document.title=(p==="home"?"":document.getElementById("p-"+p).getAttribute("data-title")+" | ")+"Karthikeya Kusuma";
+  document.querySelectorAll(".hit").forEach(function(x){x.classList.remove("hit");});
+  var el=parts[1]&&document.getElementById(parts[1]);
+  if(el){el.classList.add("hit");el.scrollIntoView();}else{window.scrollTo(0,0);}
+}
+window.addEventListener("hashchange",route);
+route();
 </script>
 </body>
 </html>
