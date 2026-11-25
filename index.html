@@ -15,9 +15,9 @@
 
 html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:#1c1c1c;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55}
-a{color:#1a5fb4;text-decoration:none}
+a{color:#4b2e83;text-decoration:none}
 a:hover{text-decoration:underline}
-a:focus-visible,summary:focus-visible{outline:2px solid #1a5fb4;outline-offset:2px}
+a:focus-visible,summary:focus-visible{outline:2px solid #4b2e83;outline-offset:2px}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px}
 header{padding:56px 0 20px}
 h1{font-size:2.4rem;font-weight:700;margin:0 0 8px;letter-spacing:-.015em;line-height:1.1}
@@ -38,7 +38,7 @@ h2{font-size:1.45rem;font-weight:700;margin:0 0 14px;padding-bottom:8px;border-b
 .o{color:#666;font-size:.93rem;margin:2px 0 10px}
 .what p{margin:0 0 11px;line-height:1.6;max-width:none;font-size:.97rem}
 details{margin:2px 0 0}
-summary{cursor:pointer;color:#1a5fb4;font-size:.88rem;display:inline-block;list-style:none}
+summary{cursor:pointer;color:#4b2e83;font-size:.88rem;display:inline-block;list-style:none}
 summary::-webkit-details-marker{display:none}
 summary:hover{text-decoration:underline}
 details ul{margin:6px 0 0;padding-left:18px;font-size:.95rem}
@@ -71,7 +71,7 @@ body{-webkit-text-size-adjust:100%;overflow-wrap:break-word}
 .bar .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:8px 28px;flex-wrap:wrap;padding-top:12px;padding-bottom:0}
 .me{font-weight:700;color:#1c1c1c;font-size:1.05rem;white-space:nowrap;padding-bottom:10px}
 .me:hover{text-decoration:none}
-nav ul{display:flex;gap:0 22px;margin:0;padding:0;list-style:none;font-size:.92rem}
+nav ul{display:flex;gap:0 18px;margin:0;padding:0;list-style:none;font-size:.92rem}
 nav{position:static;border:0;padding:0;margin:0}
 nav a{display:block;color:#444;padding:0 0 10px;border-bottom:2px solid transparent;white-space:nowrap}
 nav a:hover{text-decoration:none;color:#1c1c1c}
@@ -88,7 +88,7 @@ nav a.on{color:#1c1c1c;border-bottom-color:#1c1c1c;font-weight:700}
 .hl a:hover{text-decoration:none;background:#faf8f0}
 .hl .k{font-weight:700}
 .hl .d{color:#333}
-.hl .go{display:block;color:#1a5fb4;font-size:.88rem;margin-top:3px}
+.hl .go{display:block;color:#4b2e83;font-size:.88rem;margin-top:3px}
 .hit{background:#f6f4ea}
 .btn{display:inline-block;border:1px solid #1c1c1c;padding:6px 14px;color:#1c1c1c;font-weight:700;margin:2px 14px 6px 0}
 .btn:hover{background:#1c1c1c;color:#fff;text-decoration:none}
@@ -114,6 +114,39 @@ nav a{padding:12px 8px 8px}
 .btn{padding:8px 14px}
 footer{margin-top:36px}
 }
+
+/* color + portfolio icons */
+:root{--accent:#4b2e83}
+.bar{border-bottom:3px solid var(--accent)}
+nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.page{--c:var(--accent)}
+#p-computation{--c:#1a5fb4}
+#p-research{--c:#2b7a4b}
+#p-clinical{--c:#b3402f}
+#p-publications{--c:#a8680f}
+#p-involvement{--c:#4b2e83}
+.page h2.pt{border-bottom:3px solid var(--c);padding-bottom:8px;margin-bottom:14px}
+.sub2{border-bottom:2px solid var(--c)}
+.item .when{color:var(--c)}
+.item:target,.hit{background:#f4f0fa}
+.n{background:#efe9f8}
+.hl{border-top:0;margin-top:22px}
+.hl li{border-bottom:0;margin:0 0 10px}
+.hl a{grid-template-columns:200px 1fr;border:1px solid #e2e2e2;border-left:4px solid var(--c);padding:14px 16px;border-radius:2px}
+.hl a:hover{background:#faf8fd;border-color:var(--c)}
+.hl .k{display:flex;align-items:center;gap:8px;color:var(--c)}
+.ic{width:20px;height:20px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hl .go{color:var(--c)}
+.btn{border-color:var(--accent);background:var(--accent);color:#fff}
+.btn:hover{background:#fff;color:var(--accent)}
+.pf{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:18px 0 0}
+.pfl{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#666;margin-right:4px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--c);color:var(--c);padding:6px 12px;border-radius:999px;font-size:.92rem;font-weight:700}
+.chip:hover{background:var(--c);color:#fff;text-decoration:none}
+.chip .ic{width:18px;height:18px}
+nav a.ext{display:flex;align-items:center;gap:6px;color:var(--accent);font-weight:700}
+nav a.ext .ic{width:15px;height:15px}
+@media (max-width:640px){.hl a{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -125,8 +158,9 @@ footer{margin-top:36px}
     <li><a href="#/research" data-p="research">Health research</a></li>
     <li><a href="#/clinical" data-p="clinical">Clinical</a></li>
     <li><a href="#/publications" data-p="publications">Publications</a></li>
-    <li><a href="#/involvement" data-p="involvement">Leadership and outreach</a></li>
+    <li><a href="#/involvement" data-p="involvement">Leadership</a></li>
     <li><a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+    <li><a class="ext" href="portfolio.html" target="_blank" rel="noopener" title="Opens in a new tab">Portfolio <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a></li>
   </ul></nav>
 </div></div>
 <div class="wrap">
@@ -136,12 +170,17 @@ footer{margin-top:36px}
   <p class="tag">I study how molecules behave, and I work in the clinics where that knowledge has to land.</p>
   <p>I'm a junior at the University of Washington studying Biochemistry and Public-Global Health. I build machine-learned models for molecular dynamics, run health research on clinical trial and population data, and work in a neurology clinic. I plan to apply to PhD programs in Autumn 2027.</p>
   <p class="contact"><a class="btn" href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a><a href="mailto:karth@uw.edu">karth@uw.edu</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://github.com/karth-vader">github</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://linkedin.com/in/karthikeya-kusuma">linkedin</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://orcid.org/0009-0002-6812-4299">orcid</a></p>
+  <div class="pf"><span class="pfl">Portfolio</span>
+    <a class="chip" style="--c:#1a5fb4" href="portfolio.html#professional-communication" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Professional communication</a>
+    <a class="chip" style="--c:#2b7a4b" href="portfolio.html#research" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/></svg>Research</a>
+    <a class="chip" style="--c:#b3402f" href="portfolio.html#health-advocacy-and-outreach" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.500-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.500-7 10-7 10z"/></svg>Health advocacy and outreach</a>
+  </div>
   <ul class="hl">
-    <li><a href="#/clinical"><span class="k">Clinical</span><span class="d">2,000+ hours in a neurology clinic, assisting 15+ neurologists across 1,000+ patients and 200+ neurological exams<span class="go">See clinical work</span></span></a></li>
-    <li><a href="#/computation"><span class="k">Computation and ML</span><span class="d">Machine-learned interatomic potentials at PNNL, a first-author line notation at MIT, and deep learning surrogate models at UW and the Institute for Protein Design<span class="go">See computation and ML</span></span></a></li>
-    <li><a href="#/research"><span class="k">Health research</span><span class="d">Lipidomics from a randomized trial (1,444 lipids, 107+ participants) at Fred Hutch, plus maternal viral load and gun violence data pipelines in R<span class="go">See health research</span></span></a></li>
-    <li><a href="#/publications"><span class="k">Publications</span><span class="d">One paper published in PLOS ONE (2026) and five more in preparation or in progress<span class="go">See publications and talks</span></span></a></li>
-    <li><a href="#/involvement"><span class="k">Leadership</span><span class="d">Co-Director of Education for U-District Street Medicine, leading a team of 40<span class="go">See leadership and outreach</span></span></a></li>
+    <li style="--c:#b3402f"><a href="#/clinical"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>Clinical</span><span class="d">2,000+ hours in a neurology clinic, assisting 15+ neurologists across 1,000+ patients and 200+ neurological exams<span class="go">See clinical work</span></span></a></li>
+    <li style="--c:#1a5fb4"><a href="#/computation"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>Computation and ML</span><span class="d">Machine-learned interatomic potentials at PNNL, a first-author line notation at MIT, and deep learning surrogate models at UW and the Institute for Protein Design<span class="go">See computation and ML</span></span></a></li>
+    <li style="--c:#2b7a4b"><a href="#/research"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/></svg>Health research</span><span class="d">Lipidomics from a randomized trial (1,444 lipids, 107+ participants) at Fred Hutch, plus maternal viral load and gun violence data pipelines in R<span class="go">See health research</span></span></a></li>
+    <li style="--c:#a8680f"><a href="#/publications"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7"/></svg>Publications</span><span class="d">One paper published in PLOS ONE (2026) and five more in preparation or in progress<span class="go">See publications and talks</span></span></a></li>
+    <li style="--c:#4b2e83"><a href="#/involvement"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4.5 2 4.5 5"/></svg>Leadership</span><span class="d">Co-Director of Education for U-District Street Medicine, leading a team of 40<span class="go">See leadership and outreach</span></span></a></li>
   </ul>
   <div class="sub2">Education</div>
 

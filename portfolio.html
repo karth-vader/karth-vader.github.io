@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio | Karthikeya Kusuma</title>
+<meta name="description" content="Selected work by Karthikeya Kusuma: professional communication, research, and health advocacy and outreach.">
+<link rel="canonical" href="https://karth-vader.github.io/portfolio.html">
+<style>
+:root{--accent:#4b2e83}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#1c1c1c;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%;overflow-wrap:break-word}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.bar{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:3px solid var(--accent);z-index:5}
+.bar .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:8px 28px;flex-wrap:wrap;padding-top:12px;padding-bottom:10px}
+.me{font-weight:700;color:#1c1c1c;font-size:1.05rem;white-space:nowrap}
+.me:hover{text-decoration:none}
+.bar nav a{margin-left:20px;font-size:.92rem;color:#444}
+.bar nav a.on{color:var(--accent);font-weight:700}
+h1{font-size:2.4rem;margin:36px 0 8px;letter-spacing:-.015em;line-height:1.1}
+.lead{color:#555;margin:0 0 18px;max-width:68ch}
+.jump{display:flex;flex-wrap:wrap;gap:8px 10px;margin:0 0 8px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--c);color:var(--c);padding:6px 12px;border-radius:999px;font-size:.92rem;font-weight:700}
+.chip:hover{background:var(--c);color:#fff;text-decoration:none}
+.ic{width:18px;height:18px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+section{--c:var(--accent);scroll-margin-top:70px;padding-top:44px}
+#professional-communication{--c:#1a5fb4}
+#research{--c:#2b7a4b}
+#health-advocacy-and-outreach{--c:#b3402f}
+h2{display:flex;align-items:center;gap:10px;font-size:1.5rem;margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid var(--c);color:var(--c);letter-spacing:-.01em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:block;border:1px solid #e2e2e2;border-top:4px solid var(--c);padding:14px 16px;border-radius:2px;color:#1c1c1c}
+a.card:hover{background:#faf8fd;border-color:var(--c);text-decoration:none}
+.card .ty{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.card .ct{font-weight:700;line-height:1.35;margin:4px 0}
+.card .cd{color:#444;font-size:.93rem;margin:0}
+.card .cm{color:#666;font-size:.85rem;margin-top:8px}
+.empty{color:#777;font-size:.95rem;margin:0}
+footer{margin-top:56px;border-top:1px solid #e2e2e2;padding:18px 0 48px;color:#777;font-size:.9rem}
+@media (max-width:640px){.wrap{padding:0 18px}h1{font-size:1.85rem}.bar nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <a class="me" href="index.html">Karthikeya Kusuma</a>
+  <nav aria-label="Site"><a href="index.html">Home</a><a class="on" href="portfolio.html">Portfolio</a><a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></nav>
+</div></div>
+<div class="wrap">
+  <h1>Portfolio</h1>
+  <p class="lead">Work I have produced, organized by the kind of skill it shows. Each item links to the original.</p>
+  <div class="jump" id="jump"></div>
+  <div id="out"></div>
+  <footer>Seattle, WA. <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></footer>
+</div>
+<script>
+/* To add an artifact, add one object to ITEMS.
+   c: "professional-communication" | "research" | "health-advocacy-and-outreach"
+   ty: label such as "Poster", "Talk", "Pamphlet", "Paper"
+   t: title, d: one or two sentences, m: small line (venue, date), u: link (file in this repo or URL) */
+var ITEMS = [
+];
+
+var CATS = [
+ {id:"professional-communication",name:"Professional communication",icon:'<path d="M4 5h16v11H9l-5 4z"/>',color:"#1a5fb4"},
+ {id:"research",name:"Research",icon:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/>',color:"#2b7a4b"},
+ {id:"health-advocacy-and-outreach",name:"Health advocacy and outreach",icon:'<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.500-7 10-7 10z"/>',color:"#b3402f"}
+];
+function svg(d){return '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+d+'</svg>';}
+function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+var jump="",out="";
+CATS.forEach(function(c){
+  jump+='<a class="chip" style="--c:'+c.color+'" href="#'+c.id+'">'+svg(c.icon)+esc(c.name)+'</a>';
+  var cards=ITEMS.filter(function(i){return i.c===c.id;}).map(function(i){
+    var inner='<div class="ty">'+esc(i.ty)+'</div><div class="ct">'+esc(i.t)+'</div><p class="cd">'+esc(i.d)+'</p>'+(i.m?'<div class="cm">'+esc(i.m)+'</div>':'');
+    return i.u?'<a class="card" href="'+esc(i.u)+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
+  }).join("");
+  out+='<section id="'+c.id+'" style="--c:'+c.color+'"><h2>'+svg(c.icon.replace(/<svg.*/,""))+esc(c.name)+'</h2>'+(cards?'<div class="grid">'+cards+'</div>':'<p class="empty">Items are being added.</p>')+'</section>';
+});
+document.getElementById("jump").innerHTML=jump;
+document.getElementById("out").innerHTML=out;
+</script>
+</body>
+</html>
