@@ -63,6 +63,22 @@ figure{margin:16px 0 0;max-width:68ch}
 figure img{display:block;max-width:100%;height:auto;border:1px solid var(--line)}
 figure.tall{max-width:380px}
 figcaption{color:var(--muted);font-size:.86rem;margin-top:6px}
+
+.carousel{max-width:420px;margin:18px 0 0}
+.carousel[hidden]{display:none}
+.cv{position:relative;border:1px solid var(--line);background:#fffdf9;touch-action:pan-y}
+.cv img{display:block;width:100%;height:auto}
+.cv .nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(250,248,243,.92);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:color .15s,border-color .15s}
+.cv .nav:hover{color:var(--accent);border-color:var(--accent)}
+.cv .nav:focus-visible{outline:2px solid var(--accent)}
+.cv .nav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cv .prev{left:8px}.cv .next{right:8px}
+.cv .nav[disabled]{opacity:.3;cursor:default}
+.cv-meta{display:flex;align-items:center;justify-content:space-between;margin-top:8px;font-size:.86rem;color:var(--muted)}
+.dots{display:flex;gap:6px}
+.dots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+.dots button[aria-current="true"]{background:var(--ink)}
+.dots button:hover{background:var(--accent)}
 @media (max-width:760px){.eow{grid-template-columns:1fr;gap:4px 0;padding:22px 0}.eow .meta{padding:0}}
 @media (max-width:640px){.wrap{padding:0 18px}h1{font-size:1.85rem}.soc{margin-left:-6px}}
 </style>
@@ -150,13 +166,43 @@ figcaption{color:var(--muted);font-size:.86rem;margin-top:6px}
       <div>
         <h3>Bringing Health Resources to People Experiencing Homelessness Through Street Medicine</h3>
         <p>Since September 2025, I have served as Co-Director of Education for U-District Street Medicine, a group that supports people experiencing homelessness in Seattle&rsquo;s University District. I lead a team of 40 and focus on health education, which means deciding what people need to know and how to get it to them in a form they will use. Housing is a major social determinant of health, meaning a condition in daily life that shapes health long before anyone sees a clinician. People without housing often do not know which services exist or how to reach them, and information that is hard to read or hard to find does little good.</p>
-        <p>Two projects shaped my role. First, we built a community resource podcast from scratch, and I worked with the team to define the audience, set a content roadmap, and plan how episodes would be distributed. Second, I designed a street medicine resource pamphlet. A printed pamphlet works without a phone or data plan, and a podcast reaches people who engage with audio, so the two formats cover different needs. Coordinating 40 people taught me to break a large goal into pieces that individual team members can own and finish. The pamphlet taught me that a first draft is a hypothesis: asking readers what confused them improved it more than polishing on my own. I plan to carry that habit of testing materials with their intended audience into my public health work.</p>
-        <p>The pamphlet has been handed out to more than 200 people experiencing homelessness, and I revised it based on feedback from the people who received it.</p>
-        <div class="art"><div class="ty">Artifact</div><a href="https://canva.link/pqz8w8qhgkbsnpk" target="_blank" rel="noopener">Street Medicine Resource Guide</a><p>The resource guide I designed, showing the layout and plain-language content handed out to more than 200 people.</p></div>
+        <p>Two projects shaped my role. First, we built a community resource podcast from scratch, and I worked with the team to define the audience, set a content roadmap, and plan how episodes would be distributed. Second, we made a street medicine resource pamphlet. It was a group effort across the education team, and I designed it. A printed pamphlet works without a phone or data plan, and a podcast reaches people who engage with audio, so the two formats cover different needs. Coordinating 40 people taught me to break a large goal into pieces that individual team members can own and finish. The pamphlet taught me that a first draft is a hypothesis: asking readers what confused them improved it more than polishing on my own. I plan to carry that habit of testing materials with their intended audience into my public health work.</p>
+        <p>The pamphlet has been handed out to more than 200 people experiencing homelessness, and we revised it based on feedback from the people who received it.</p>
+        <figure class="carousel" id="pamphlet" hidden aria-roledescription="carousel" aria-label="Street Medicine Resource Guide pages"></figure>
+        <div class="art"><div class="ty">Artifact</div><a href="https://canva.link/pqz8w8qhgkbsnpk" target="_blank" rel="noopener">Street Medicine Resource Guide</a><p>A group effort by the U-District Street Medicine education team, handed out to more than 200 people. Open it in Canva to see the full design.</p></div>
       </div>
     </article>
   </section>
   <footer>Seattle, WA. <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></footer>
 </div>
+<script>
+/* Pamphlet pages for the carousel. Add one entry per page, in order, with image files in portfolio/. */
+var PAMPHLET = [
+];
+(function(){
+  var root=document.getElementById("pamphlet"); if(!root||!PAMPHLET.length) return;
+  var i=0,n=PAMPHLET.length;
+  var ar='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M';
+  root.innerHTML='<div class="cv"><img alt=""><button class="nav prev" type="button" aria-label="Previous page">'+ar+'15 5l-7 7 7 7"/></svg></button><button class="nav next" type="button" aria-label="Next page">'+ar+'9 5l7 7-7 7"/></svg></button></div>'
+   +'<div class="cv-meta"><span class="count" aria-live="polite"></span><span class="dots"></span></div>'
+   +'<figcaption>Street Medicine Resource Guide, a group effort by the U-District Street Medicine education team.</figcaption>';
+  var img=root.querySelector("img"),prev=root.querySelector(".prev"),next=root.querySelector(".next"),count=root.querySelector(".count"),dots=root.querySelector(".dots");
+  PAMPHLET.forEach(function(p,k){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Go to page "+(k+1));b.onclick=function(){go(k);};dots.appendChild(b);var im=new Image();im.src=p.src;});
+  function go(k){
+    i=Math.max(0,Math.min(n-1,k));
+    img.src=PAMPHLET[i].src; img.alt=PAMPHLET[i].alt||("Pamphlet page "+(i+1));
+    count.textContent="Page "+(i+1)+" of "+n;
+    prev.disabled=i===0; next.disabled=i===n-1;
+    Array.prototype.forEach.call(dots.children,function(d,k){d.setAttribute("aria-current",k===i?"true":"false");});
+  }
+  prev.onclick=function(){go(i-1);}; next.onclick=function(){go(i+1);};
+  root.tabIndex=0;
+  root.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"){go(i-1);e.preventDefault();}else if(e.key==="ArrowRight"){go(i+1);e.preventDefault();}});
+  var x0=null,cv=root.querySelector(".cv");
+  cv.addEventListener("touchstart",function(e){x0=e.touches[0].clientX;},{passive:true});
+  cv.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)go(dx<0?i+1:i-1);});
+  root.hidden=false; go(0);
+})();
+</script>
 </body>
 </html>
