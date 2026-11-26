@@ -112,7 +112,7 @@ section h2{margin-top:0}
   <h1>Portfolio</h1>
   <p class="lead">Every entry on my CV has a section here. Where I have work to show, it is written up under the entry, with what I did, what I learned, and links to the work itself.</p>
 
-  <div class="sub2x">Work showcase</div>
+  <div class="sub2x">Featured work showcase</div>
   <div class="idx">
     <div><b>Professional communication</b><ul><li><a href="#eow-site-tours">Connecting Teachers to Local Science Workplaces Through Site Tours</a></li><li><a href="#eow-radio-script">Turning Grocery Workers&rsquo; Voices Into a Back Health Radio Program</a></li></ul></div>
     <div><b>Research</b><ul><li><a href="#eow-microfluidics">Designing Microfluidic Devices to Capture Single Cancer Cells</a></li><li><a href="#eow-lipid">Finding Diet-Related Lipid Signatures in a Colorectal Cancer Prevention Trial</a></li></ul></div>
@@ -170,15 +170,19 @@ section h2{margin-top:0}
   <footer>Seattle, WA. <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></footer>
 </div>
 <script src="entries.js"></script>
+<script src="showcase.js"></script>
 <script>
 (function(){
   var G=[["computation","Computation and ML"],["research","Health research"],["clinical","Clinical work"],["outreach","Education and outreach"],["leadership","Communication and leadership"],["projects","Projects"]];
   var jump="",out="";
   function block(e,when){
-    var h='<article class="eow'+(e.pf?'':' blank')+'" id="'+e.id+'"><div class="meta">'+when+'</div><div><h3>'+e.t+'</h3>'+(e.o?'<p class="org">'+e.o+'</p>':'');
+    var h='<article class="eow'+(e.pf||SC[e.id]?'':' blank')+'" id="'+e.id+'"><div class="meta">'+when+'</div><div><h3>'+e.t+'</h3>'+(e.o?'<p class="org">'+e.o+'</p>':'');
     if(e.pf){
       var t=document.getElementById("tpl-"+e.pf);
       h+='<div class="sc" id="'+e.pf+'"><div class="tag">Work showcase: '+t.getAttribute("data-cat")+'</div>'+t.innerHTML+'</div>';
+    } else if(SC[e.id]){
+      var w=SC[e.id];
+      h+='<div class="sc" id="sc-'+e.id+'"><div class="tag">Work showcase: '+w.cat+'</div><h4>'+w.t+'</h4><p>'+w.p.join('</p><p>')+'</p></div>';
     } else {
       h+='<p class="soon">Coming soon.</p>';
     }
