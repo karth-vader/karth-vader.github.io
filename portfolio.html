@@ -79,6 +79,11 @@ figcaption{color:var(--muted);font-size:.86rem;margin-top:6px}
 .dots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
 .dots button[aria-current="true"]{background:var(--ink)}
 .dots button:hover{background:var(--accent)}
+
+.grp{font-family:Georgia,"Times New Roman",serif;font-size:1.1rem;font-weight:400;margin:30px 0 0;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.eow.blank{padding:18px 0}
+.eow.blank h3{font-size:1.1rem;margin:0 0 4px}
+.eow.blank .soon{color:var(--muted);font-size:.9rem;margin:0}
 @media (max-width:760px){.eow{grid-template-columns:1fr;gap:4px 0;padding:22px 0}.eow .meta{padding:0}}
 @media (max-width:640px){.wrap{padding:0 18px}h1{font-size:1.85rem}.soc{margin-left:-6px}}
 </style>
@@ -91,7 +96,7 @@ figcaption{color:var(--muted);font-size:.86rem;margin-top:6px}
 <div class="wrap">
   <h1>Portfolio</h1>
   <p class="lead">Examples of my work, grouped by what they show. Each one explains what I did, what I learned, and links to the work itself.</p>
-  <div class="jump"><a href="#professional-communication">Professional communication</a><a href="#research">Research</a><a href="#health-advocacy-and-outreach">Health advocacy and outreach</a></div>
+  <div class="jump"><a href="#professional-communication">Professional communication</a><a href="#research">Research</a><a href="#health-advocacy-and-outreach">Health advocacy and outreach</a><a href="#more-work">More work</a></div>
 
   <section id="professional-communication">
     <h2>Professional communication</h2>
@@ -173,8 +178,33 @@ figcaption{color:var(--muted);font-size:.86rem;margin-top:6px}
       </div>
     </article>
   </section>
+  <section id="more-work">
+    <h2>More work</h2>
+    <p class="cat-note">The rest of my activities from my CV. Portfolio items for these are being added.</p>
+    <div id="more"></div>
+  </section>
+
   <footer>Seattle, WA. <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></footer>
 </div>
+<script src="entries.js"></script>
+<script>
+(function(){
+  var G=[["computation","Computation and ML"],["research","Health research"],["clinical","Clinical work"],["outreach","Education and outreach"],["leadership","Communication and leadership"]];
+  var out="";
+  function row(e,when){
+    return '<article class="eow blank" id="'+e.id+'"><div class="meta">'+when+'</div><div><h3>'+e.t+'</h3>'+(e.o?'<p class="soon" style="margin-bottom:6px">'+e.o+'</p>':'')+'<p class="soon">Coming soon.</p></div></article>';
+  }
+  G.forEach(function(g){
+    var items=E.filter(function(e){return e.c===g[0]&&!e.pf;});
+    if(!items.length) return;
+    out+='<h3 class="grp">'+g[1]+'</h3>'+items.map(function(e){return row(e,e.d);}).join("");
+  });
+  var proj=P.map(function(p){return row({id:p.id,t:p.t,o:p.k},"2026");}).join("");
+  if(proj) out+='<h3 class="grp">Projects</h3>'+proj;
+  document.getElementById("more").innerHTML=out;
+  if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView();}
+})();
+</script>
 <script>
 /* Pamphlet pages for the carousel. Add one entry per page, in order, with image files in portfolio/. */
 var PAMPHLET = [
