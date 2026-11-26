@@ -29,7 +29,7 @@ var E = [
   "Supporting an on-site college and career readiness specialist at Decatur High School in the Federal Way School District, delivering direct service to underserved students navigating post-secondary pathways",
   "Facilitating workshops and classroom presentations on FAFSA/WASFA, financial aid, and the college application process for students and families",
   "Assisting graduating seniors with college applications, personal statements, and financial aid completion to help meet district college-readiness goals"]},
- {c:"outreach",s:"Sep 2025",d:"Sept 2025 – Present",t:"Co-Director of Education, U-District Street Medicine",pf:"eow-street-medicine",o:"Seattle, WA",b:[
+ {c:"outreach",s:"Sep 2025",d:"Sept 2025 – March 2026",t:"Co-Director of Education, U-District Street Medicine",pf:"eow-street-medicine",o:"Seattle, WA",b:[
   "Led a cross-functional team of 40 to build a community resource podcast from scratch, defining audience, content roadmap, and distribution strategy",
   "Designed a street-medicine resource pamphlet distributed to 200+ individuals experiencing homelessness, integrating user feedback to improve clarity and usability"]},
  {c:"outreach",s:"Sep 2025",d:"Sept 2025 – Present",t:"Member, Active Minds",o:"UW Seattle",b:[
