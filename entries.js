@@ -18,7 +18,7 @@ var E = [
   "Automated a data cleaning and validation pipeline to flag inconsistent clinical records across longitudinal visit windows"]},
  {c:"research",s:"Sep 2025",d:"Sept 2025 – Sept 2026",t:"Research Assistant, Lawley Lab",ref:"pub-hpv",pub:"pub",o:"UW School of Public Health. Seattle, WA",b:[
   "Collaborating with a PhD candidate on a systematic review of HPV awareness, vaccination, and screening disparities among bisexual-identifying populations, running database searches and eligibility screening across PubMed, CINAHL, and PsycINFO (PROSPERO CRD420251252015)"]},
- {c:"research",s:"Aug 2025",d:"Aug 2025 – Feb 2026",t:"Research Assistant, Lampe Lab",pf:"eow-lipid",ref:"pub-lipidome",pub:"prep",o:"Fred Hutchinson Cancer Center, Public Health Sciences Division. Seattle, WA",b:[
+ {c:"research",s:"Aug 2025",d:"Aug 2025 – Feb 2026",t:"Research Assistant, Lampe Lab",ref:"pub-lipidome",pub:"prep",o:"Fred Hutchinson Cancer Center, Public Health Sciences Division. Seattle, WA",b:[
   "Analyzed 1,444 lipids and 372 aqueous metabolites from 107+ participants in a randomized crossover trial of fish oil and fiber, using linear mixed models with covariate adjustment and FDR correction, plus PCA and LDA, to identify lipid signatures of dietary effects on colorectal cancer biomarkers"]},
  {c:"research",s:"Jul 2025",d:"July 2025 – Oct 2025",t:"Research Assistant, Firearm Injury and Policy Research Program",o:"UW School of Public Health. Seattle, WA",b:[
   "Linked gun violence incident data with 5,000+ patient cases at Harborview Medical Center, then merged, cleaned, and analyzed the datasets in R to investigate community-level risk factors and health disparities"]},
@@ -29,10 +29,10 @@ var E = [
   "Supporting an on-site college and career readiness specialist at Decatur High School in the Federal Way School District, delivering direct service to underserved students navigating post-secondary pathways",
   "Facilitating workshops and classroom presentations on FAFSA/WASFA, financial aid, and the college application process for students and families",
   "Assisting graduating seniors with college applications, personal statements, and financial aid completion to help meet district college-readiness goals"]},
- {c:"outreach",s:"Sep 2025",d:"Sept 2025 – March 2026",t:"Co-Director of Education, U-District Street Medicine",pf:"eow-street-medicine",o:"Seattle, WA",b:[
+ {c:"outreach",s:"Sep 2025",d:"Sept 2025 – March 2026",t:"Co-Director of Education, U-District Street Medicine",o:"Seattle, WA",b:[
   "Led a cross-functional team of 40 to build a community resource podcast from scratch, defining audience, content roadmap, and distribution strategy",
   "Designed a street-medicine resource pamphlet distributed to 200+ individuals experiencing homelessness, integrating user feedback to improve clarity and usability"]},
- {c:"outreach",s:"Sep 2025",d:"Sept 2025 – Present",t:"Member, Active Minds",o:"UW Seattle",b:[
+ {c:"outreach",s:"Sep 2025",d:"Sept 2025 – March 2026",t:"Member, Active Minds",o:"UW Seattle",b:[
   "Co-led mental health awareness initiatives and planned community engagement events including a therapy dog de-stress event for students"]},
  {c:"outreach",s:"Sep 2025",d:"Sept 2025 – Dec 2025",t:"Volunteer Math Tutor",o:"Washington Middle School. Seattle, WA",b:[
   "Tutored 6th-grade students in math for 50 volunteer hours over the quarter, adapting explanations to each student's level to reinforce foundational skills and build confidence"]},
