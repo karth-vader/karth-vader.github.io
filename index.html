@@ -115,43 +115,60 @@ nav a{padding:12px 8px 8px}
 footer{margin-top:36px}
 }
 
-/* color + portfolio icons */
-:root{--accent:#4b2e83}
-.bar{border-bottom:3px solid var(--accent)}
-nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
-.page{--c:var(--accent)}
-#p-computation{--c:#1a5fb4}
-#p-research{--c:#2b7a4b}
-#p-clinical{--c:#b3402f}
-#p-publications{--c:#a8680f}
-#p-involvement{--c:#4b2e83}
-.page h2.pt{border-bottom:3px solid var(--c);padding-bottom:8px;margin-bottom:14px}
-.sub2{border-bottom:2px solid var(--c)}
-.item .when{color:var(--c)}
-.item:target,.hit{background:#f4f0fa}
-.n{background:#efe9f8}
-.hl{border-top:0;margin-top:22px}
-.hl li{border-bottom:0;margin:0 0 10px}
-.hl a{grid-template-columns:200px 1fr;border:1px solid #e2e2e2;border-left:4px solid var(--c);padding:14px 16px;border-radius:2px}
-.hl a:hover{background:#faf8fd;border-color:var(--c)}
-.hl .k{display:flex;align-items:center;gap:8px;color:var(--c)}
-.ic{width:20px;height:20px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.hl .go{color:var(--c)}
-.btn{border-color:var(--accent);background:var(--accent);color:#fff}
-.btn:hover{background:#fff;color:var(--accent)}
-.pf{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:18px 0 0}
-.pfl{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#666;margin-right:4px}
-.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--c);color:var(--c);padding:6px 12px;border-radius:999px;font-size:.92rem;font-weight:700}
-.chip:hover{background:var(--c);color:#fff;text-decoration:none}
-.chip .ic{width:18px;height:18px}
-nav a.ext{display:flex;align-items:center;gap:6px;color:var(--accent);font-weight:700}
-nav a.ext .ic{width:15px;height:15px}
-@media (max-width:640px){.hl a{grid-template-columns:1fr}}
+/* refined palette: warm neutrals, accent on hover only */
+:root{--bg:#faf8f3;--ink:#1f1d1a;--muted:#6b665d;--line:#e4dfd3;--accent:#9c4a2f;--tint:#f0e9da}
+body{background:var(--bg);color:var(--ink)}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:#cbc3b0;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent)}
+h1,h2,.sub2,.me{font-family:Georgia,"Times New Roman",serif}
+.bar{background:rgba(250,248,243,.97);border-bottom:1px solid var(--line)}
+.bar .wrap{display:block;padding-top:8px;padding-bottom:0}
+.top{display:flex;align-items:center;gap:14px;padding:2px 0 4px}
+.soc{display:flex;align-items:center;gap:2px;margin-left:-8px}
+.soc a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:var(--muted);text-decoration:none}
+.soc a:hover{color:var(--accent);background:var(--tint)}
+.soc svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.vr{width:1px;height:22px;background:var(--line)}
+.me{padding:0;width:auto;font-size:1.15rem;text-decoration:none}
+.me:hover{color:var(--accent)}
+nav{background:transparent}
+nav a{text-decoration:none;color:var(--muted);border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+nav a.on{color:var(--ink);border-bottom-color:var(--ink);font-weight:700}
+nav a.ext{display:flex;align-items:center;gap:6px}
+nav a.ext svg,.pl svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.page h1{font-weight:400}
+.page h2.pt{font-weight:400;border-bottom:1px solid var(--ink);padding-bottom:8px;margin-bottom:14px}
+.sub2{font-weight:400;border-bottom:1px solid var(--ink)}
+.when{color:var(--muted)}
+.item{border-bottom:1px solid var(--line);position:relative}
+.item::before{content:"";position:absolute;left:-14px;top:22px;bottom:22px;width:2px;background:transparent;transition:background .15s}
+.item:hover::before{background:var(--accent)}
+.item:target,.hit{background:var(--tint)}
+.n{background:var(--tint)}
+.tl{border-bottom-color:#b9b09b}
+.tl:hover{border-bottom-color:var(--accent)}
+.hl{border-top:1px solid var(--ink);margin-top:26px}
+.hl li{border-bottom:1px solid var(--line);margin:0}
+.hl a{grid-template-columns:190px 1fr;border:0;border-radius:0;padding:16px 0;text-decoration:none;color:var(--ink);transition:padding .15s,box-shadow .15s}
+.hl a:hover{background:transparent;padding-left:12px;box-shadow:inset 2px 0 0 var(--accent)}
+.hl .k{font-family:Georgia,serif;font-size:1.05rem;color:var(--ink)}
+.hl a:hover .k{color:var(--accent)}
+.hl .go{color:var(--muted)}
+.hl a:hover .go{color:var(--accent)}
+.btn{background:transparent;border:1px solid var(--ink);color:var(--ink);text-decoration:none}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.pl{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:.86rem;text-decoration:none;margin:2px 0 0}
+.pl:hover{color:var(--accent)}
+.pl:hover span{text-decoration:underline;text-underline-offset:3px}
+footer{border-top-color:var(--line)}
+@media (max-width:640px){.hl a{grid-template-columns:1fr}.hl a:hover{padding-left:8px}.item::before{left:-10px}.soc{margin-left:-6px}}
 </style>
 </head>
 <body>
 <div class="bar"><div class="wrap">
-  <a class="me" href="#/">Karthikeya Kusuma</a>
+  <div class="top"><div class="soc"><a href="https://github.com/karth-vader" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a><a href="https://linkedin.com/in/karthikeya-kusuma" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://orcid.org/0009-0002-6812-4299" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 10.5v6M12 10.5h2.2a3 3 0 0 1 0 6H12z"/><circle cx="8.5" cy="7.8" r=".6"/></svg></a><a href="mailto:karth@uw.edu" aria-label="Email" title="karth@uw.edu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a></div><span class="vr"></span><a class="me" href="#/">Karthikeya Kusuma</a></div>
   <nav aria-label="Pages"><ul>
     <li><a href="#/" data-p="home">Home</a></li>
     <li><a href="#/computation" data-p="computation">Computation and ML</a></li>
@@ -160,7 +177,7 @@ nav a.ext .ic{width:15px;height:15px}
     <li><a href="#/publications" data-p="publications">Publications</a></li>
     <li><a href="#/involvement" data-p="involvement">Leadership</a></li>
     <li><a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></li>
-    <li><a class="ext" href="portfolio.html" target="_blank" rel="noopener" title="Opens in a new tab">Portfolio <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a></li>
+    <li><a class="ext" href="portfolio.html" target="_blank" rel="noopener" title="Opens in a new tab">Portfolio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a></li>
   </ul></nav>
 </div></div>
 <div class="wrap">
@@ -169,18 +186,13 @@ nav a.ext .ic{width:15px;height:15px}
   <h1>Karthikeya Kusuma</h1>
   <p class="tag">I study how molecules behave, and I work in the clinics where that knowledge has to land.</p>
   <p>I'm a junior at the University of Washington studying Biochemistry and Public-Global Health. I build machine-learned models for molecular dynamics, run health research on clinical trial and population data, and work in a neurology clinic. I plan to apply to PhD programs in Autumn 2027.</p>
-  <p class="contact"><a class="btn" href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a><a href="mailto:karth@uw.edu">karth@uw.edu</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://github.com/karth-vader">github</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://linkedin.com/in/karthikeya-kusuma">linkedin</a> <span class="sep">&nbsp;/&nbsp;</span> <a href="https://orcid.org/0009-0002-6812-4299">orcid</a></p>
-  <div class="pf"><span class="pfl">Portfolio</span>
-    <a class="chip" style="--c:#1a5fb4" href="portfolio.html#professional-communication" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Professional communication</a>
-    <a class="chip" style="--c:#2b7a4b" href="portfolio.html#research" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/></svg>Research</a>
-    <a class="chip" style="--c:#b3402f" href="portfolio.html#health-advocacy-and-outreach" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.500-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.500-7 10-7 10z"/></svg>Health advocacy and outreach</a>
-  </div>
+  <p class="contact"><a class="btn" href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a><a class="btn" href="portfolio.html" target="_blank" rel="noopener">Portfolio</a></p>
   <ul class="hl">
-    <li style="--c:#b3402f"><a href="#/clinical"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>Clinical</span><span class="d">2,000+ hours in a neurology clinic, assisting 15+ neurologists across 1,000+ patients and 200+ neurological exams<span class="go">See clinical work</span></span></a></li>
-    <li style="--c:#1a5fb4"><a href="#/computation"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>Computation and ML</span><span class="d">Machine-learned interatomic potentials at PNNL, a first-author line notation at MIT, and deep learning surrogate models at UW and the Institute for Protein Design<span class="go">See computation and ML</span></span></a></li>
-    <li style="--c:#2b7a4b"><a href="#/research"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/></svg>Health research</span><span class="d">Lipidomics from a randomized trial (1,444 lipids, 107+ participants) at Fred Hutch, plus maternal viral load and gun violence data pipelines in R<span class="go">See health research</span></span></a></li>
-    <li style="--c:#a8680f"><a href="#/publications"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7"/></svg>Publications</span><span class="d">One paper published in PLOS ONE (2026) and five more in preparation or in progress<span class="go">See publications and talks</span></span></a></li>
-    <li style="--c:#4b2e83"><a href="#/involvement"><span class="k"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4.5 2 4.5 5"/></svg>Leadership</span><span class="d">Co-Director of Education for U-District Street Medicine, leading a team of 40<span class="go">See leadership and outreach</span></span></a></li>
+    <li><a href="#/clinical"><span class="k">Clinical</span><span class="d">2,000+ hours in a neurology clinic, assisting 15+ neurologists across 1,000+ patients and 200+ neurological exams<span class="go">See clinical work</span></span></a></li>
+    <li><a href="#/computation"><span class="k">Computation and ML</span><span class="d">Machine-learned interatomic potentials at PNNL, a first-author line notation at MIT, and deep learning surrogate models at UW and the Institute for Protein Design<span class="go">See computation and ML</span></span></a></li>
+    <li><a href="#/research"><span class="k">Health research</span><span class="d">Lipidomics from a randomized trial (1,444 lipids, 107+ participants) at Fred Hutch, plus maternal viral load and gun violence data pipelines in R<span class="go">See health research</span></span></a></li>
+    <li><a href="#/publications"><span class="k">Publications</span><span class="d">One paper published in PLOS ONE (2026) and five more in preparation or in progress<span class="go">See publications and talks</span></span></a></li>
+    <li><a href="#/involvement"><span class="k">Leadership</span><span class="d">Co-Director of Education for U-District Street Medicine, leading a team of 40<span class="go">See leadership and outreach</span></span></a></li>
   </ul>
   <div class="sub2">Education</div>
 
@@ -325,6 +337,9 @@ var P = [
   "Computed time-evolving vorticity fields with reflective boundary conditions; exported an 80-frame GIF capturing von Kármán vortex street formation"]}
 ];
 
+var PF={computation:"research",research:"research",clinical:"health-advocacy-and-outreach",outreach:"health-advocacy-and-outreach",leadership:"professional-communication"};
+var FOLDER='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>';
+function pl(c){return '<div><a class="pl" href="portfolio.html#'+PF[c]+'" target="_blank" rel="noopener" title="Opens in a new tab">'+FOLDER+'<span>See portfolio</span></a></div>';}
 function hl(x){
   return x.replace(/(?<![\w.>\-])(?<![A-Za-z]\()~?\d[\d,]*(?:\.\d+)?(?:\+|\u00d7|%)?(?![A-Za-z\d])/g,function(m){
     if(/^(19|20)\d\d$/.test(m)) return m;
@@ -350,11 +365,11 @@ function body(e){
 ["computation","research","clinical","outreach","leadership"].forEach(function(c){
   var out="";
   E.filter(function(e){return e.c===c;}).sort(function(a,b){return c==="clinical"?(b.hrs||0)-(a.hrs||0):0;}).forEach(function(e){
-    out+='<div class="item"><div class="when">'+e.d+'</div><div class="what"><div class="t">'+title(e)+mark(e)+'</div><div class="o">'+e.o+'</div>'+body(e)+'</div></div>';
+    out+='<div class="item"><div class="when">'+e.d+'</div><div class="what"><div class="t">'+title(e)+mark(e)+'</div><div class="o">'+e.o+'</div>'+body(e)+pl(c)+'</div></div>';
   });
   document.getElementById("s-"+c).innerHTML=out;
 });
-(function(){var out="";P.forEach(function(p){out+='<div class="item"><div class="when">2026</div><div class="what"><div class="t">'+(p.g?'<a href="'+p.g+'">'+p.t+'</a>':p.t)+'</div><div class="o">'+p.k+'</div><p>'+hl(p.b[0])+'</p></div></div>';});document.getElementById("s-projects").innerHTML=out;})();
+(function(){var out="";P.forEach(function(p){out+='<div class="item"><div class="when">2026</div><div class="what"><div class="t">'+(p.g?'<a href="'+p.g+'">'+p.t+'</a>':p.t)+'</div><div class="o">'+p.k+'</div><p>'+hl(p.b[0])+'</p>'+pl(p.c)+'</div></div>';});document.getElementById("s-projects").innerHTML=out;})();
 
 var pages=["home","computation","research","clinical","publications","involvement"];
 function route(){

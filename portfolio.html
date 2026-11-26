@@ -7,45 +7,51 @@
 <meta name="description" content="Selected work by Karthikeya Kusuma: professional communication, research, and health advocacy and outreach.">
 <link rel="canonical" href="https://karth-vader.github.io/portfolio.html">
 <style>
-:root{--accent:#4b2e83}
+:root{--bg:#faf8f3;--ink:#1f1d1a;--muted:#6b665d;--line:#e4dfd3;--accent:#9c4a2f;--tint:#f0e9da}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#1c1c1c;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%;overflow-wrap:break-word}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%;overflow-wrap:break-word}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:#cbc3b0;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,.me{font-family:Georgia,"Times New Roman",serif}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px}
-.bar{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:3px solid var(--accent);z-index:5}
-.bar .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:8px 28px;flex-wrap:wrap;padding-top:12px;padding-bottom:10px}
-.me{font-weight:700;color:#1c1c1c;font-size:1.05rem;white-space:nowrap}
-.me:hover{text-decoration:none}
-.bar nav a{margin-left:20px;font-size:.92rem;color:#444}
-.bar nav a.on{color:var(--accent);font-weight:700}
-h1{font-size:2.4rem;margin:36px 0 8px;letter-spacing:-.015em;line-height:1.1}
-.lead{color:#555;margin:0 0 18px;max-width:68ch}
-.jump{display:flex;flex-wrap:wrap;gap:8px 10px;margin:0 0 8px}
-.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--c);color:var(--c);padding:6px 12px;border-radius:999px;font-size:.92rem;font-weight:700}
-.chip:hover{background:var(--c);color:#fff;text-decoration:none}
-.ic{width:18px;height:18px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-section{--c:var(--accent);scroll-margin-top:70px;padding-top:44px}
-#professional-communication{--c:#1a5fb4}
-#research{--c:#2b7a4b}
-#health-advocacy-and-outreach{--c:#b3402f}
-h2{display:flex;align-items:center;gap:10px;font-size:1.5rem;margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid var(--c);color:var(--c);letter-spacing:-.01em}
+.bar{position:sticky;top:0;background:rgba(250,248,243,.97);border-bottom:1px solid var(--line);z-index:5}
+.bar .wrap{padding-top:8px}
+.top{display:flex;align-items:center;gap:14px;padding:2px 0 4px}
+.soc{display:flex;align-items:center;gap:2px;margin-left:-8px}
+.soc a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:var(--muted);text-decoration:none}
+.soc a:hover{color:var(--accent);background:var(--tint)}
+.soc svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.vr{width:1px;height:22px;background:var(--line)}
+.me{font-size:1.15rem;color:var(--ink);text-decoration:none}
+.me:hover{color:var(--accent)}
+nav{display:flex;gap:0 18px;font-size:.92rem}
+nav a{display:block;color:var(--muted);text-decoration:none;padding:0 0 10px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--ink)}
+h1{font-size:2.4rem;font-weight:400;margin:36px 0 8px;letter-spacing:-.015em;line-height:1.1}
+.lead{color:var(--muted);margin:0 0 18px;max-width:68ch}
+.jump{display:flex;flex-wrap:wrap;gap:6px 20px;margin:0 0 4px;font-size:.92rem}
+.jump a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+section{scroll-margin-top:90px;padding-top:44px}
+h2{font-size:1.5rem;font-weight:400;margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--ink);letter-spacing:-.01em}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
-.card{display:block;border:1px solid #e2e2e2;border-top:4px solid var(--c);padding:14px 16px;border-radius:2px;color:#1c1c1c}
-a.card:hover{background:#faf8fd;border-color:var(--c);text-decoration:none}
-.card .ty{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
-.card .ct{font-weight:700;line-height:1.35;margin:4px 0}
-.card .cd{color:#444;font-size:.93rem;margin:0}
-.card .cm{color:#666;font-size:.85rem;margin-top:8px}
-.empty{color:#777;font-size:.95rem;margin:0}
-footer{margin-top:56px;border-top:1px solid #e2e2e2;padding:18px 0 48px;color:#777;font-size:.9rem}
-@media (max-width:640px){.wrap{padding:0 18px}h1{font-size:1.85rem}.bar nav a{margin:0 14px 0 0}}
+.card{display:block;position:relative;border:1px solid var(--line);background:#fffdf9;padding:14px 16px;color:var(--ink);text-decoration:none;transition:border-color .15s,box-shadow .15s}
+a.card:hover{border-color:#cfc6b1;box-shadow:inset 3px 0 0 var(--accent)}
+.card .ty{font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card .ct{font-family:Georgia,serif;font-size:1.05rem;line-height:1.35;margin:4px 0}
+a.card:hover .ct{color:var(--accent)}
+.card .cd{color:#4a463f;font-size:.93rem;margin:0}
+.card .cm{color:var(--muted);font-size:.85rem;margin-top:8px}
+.empty{color:var(--muted);font-size:.95rem;margin:0}
+footer{margin-top:56px;border-top:1px solid var(--line);padding:18px 0 48px;color:var(--muted);font-size:.9rem}
+@media (max-width:640px){.wrap{padding:0 18px}h1{font-size:1.85rem}.soc{margin-left:-6px}}
 </style>
 </head>
 <body>
 <div class="bar"><div class="wrap">
-  <a class="me" href="index.html">Karthikeya Kusuma</a>
+  <div class="top"><div class="soc"><a href="https://github.com/karth-vader" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a><a href="https://linkedin.com/in/karthikeya-kusuma" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://orcid.org/0009-0002-6812-4299" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.5 10.5v6M12 10.5h2.2a3 3 0 0 1 0 6H12z"/><circle cx="8.5" cy="7.8" r=".6"/></svg></a><a href="mailto:karth@uw.edu" aria-label="Email" title="karth@uw.edu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a></div><span class="vr"></span><a class="me" href="index.html">Karthikeya Kusuma</a></div>
   <nav aria-label="Site"><a href="index.html">Home</a><a class="on" href="portfolio.html">Portfolio</a><a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></nav>
 </div></div>
 <div class="wrap">
@@ -64,20 +70,19 @@ var ITEMS = [
 ];
 
 var CATS = [
- {id:"professional-communication",name:"Professional communication",icon:'<path d="M4 5h16v11H9l-5 4z"/>',color:"#1a5fb4"},
- {id:"research",name:"Research",icon:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/>',color:"#2b7a4b"},
- {id:"health-advocacy-and-outreach",name:"Health advocacy and outreach",icon:'<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.500-7 10-7 10z"/>',color:"#b3402f"}
+ {id:"professional-communication",name:"Professional communication"},
+ {id:"research",name:"Research"},
+ {id:"health-advocacy-and-outreach",name:"Health advocacy and outreach"}
 ];
-function svg(d){return '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+d+'</svg>';}
 function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
 var jump="",out="";
 CATS.forEach(function(c){
-  jump+='<a class="chip" style="--c:'+c.color+'" href="#'+c.id+'">'+svg(c.icon)+esc(c.name)+'</a>';
+  jump+='<a href="#'+c.id+'">'+esc(c.name)+'</a>';
   var cards=ITEMS.filter(function(i){return i.c===c.id;}).map(function(i){
     var inner='<div class="ty">'+esc(i.ty)+'</div><div class="ct">'+esc(i.t)+'</div><p class="cd">'+esc(i.d)+'</p>'+(i.m?'<div class="cm">'+esc(i.m)+'</div>':'');
     return i.u?'<a class="card" href="'+esc(i.u)+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
   }).join("");
-  out+='<section id="'+c.id+'" style="--c:'+c.color+'"><h2>'+svg(c.icon.replace(/<svg.*/,""))+esc(c.name)+'</h2>'+(cards?'<div class="grid">'+cards+'</div>':'<p class="empty">Items are being added.</p>')+'</section>';
+  out+='<section id="'+c.id+'"><h2>'+esc(c.name)+'</h2>'+(cards?'<div class="grid">'+cards+'</div>':'<p class="empty">Items are being added.</p>')+'</section>';
 });
 document.getElementById("jump").innerHTML=jump;
 document.getElementById("out").innerHTML=out;
