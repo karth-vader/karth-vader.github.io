@@ -46,6 +46,23 @@ a.card:hover .ct{color:var(--accent)}
 .card .cm{color:var(--muted);font-size:.85rem;margin-top:8px}
 .empty{color:var(--muted);font-size:.95rem;margin:0}
 footer{margin-top:56px;border-top:1px solid var(--line);padding:18px 0 48px;color:var(--muted);font-size:.9rem}
+
+.cat-note{color:var(--muted);margin:0 0 6px;max-width:68ch;font-size:.95rem}
+.eow{display:grid;grid-template-columns:170px 1fr;gap:0 28px;padding:26px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px;position:relative}
+.eow:last-child{border-bottom:0}
+.eow:target{background:var(--tint)}
+.eow .meta{color:var(--muted);font-size:.88rem;padding-top:6px}
+.eow .meta b{display:block;color:var(--ink);font-weight:700;margin-bottom:2px}
+.eow h3{font-family:Georgia,"Times New Roman",serif;font-size:1.3rem;font-weight:400;line-height:1.3;margin:0 0 12px;letter-spacing:-.005em}
+.eow p{margin:0 0 13px;max-width:68ch;font-size:.98rem;line-height:1.65}
+.art{margin:16px 0 0;padding:12px 14px;border:1px solid var(--line);background:#fffdf9;max-width:68ch}
+.art .ty{font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.art a{font-family:Georgia,serif;font-size:1.02rem}
+.art p{margin:4px 0 0;color:#4a463f;font-size:.9rem}
+figure{margin:16px 0 0;max-width:68ch}
+figure img{display:block;max-width:100%;height:auto;border:1px solid var(--line)}
+figcaption{color:var(--muted);font-size:.86rem;margin-top:6px}
+@media (max-width:760px){.eow{grid-template-columns:1fr;gap:4px 0;padding:22px 0}.eow .meta{padding:0}}
 @media (max-width:640px){.wrap{padding:0 18px}h1{font-size:1.85rem}.soc{margin-left:-6px}}
 </style>
 </head>
@@ -56,36 +73,86 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:18px 0 48px;colo
 </div></div>
 <div class="wrap">
   <h1>Portfolio</h1>
-  <p class="lead">Work I have produced, organized by the kind of skill it shows. Each item links to the original.</p>
-  <div class="jump" id="jump"></div>
-  <div id="out"></div>
+  <p class="lead">Examples of my work, grouped by what they show. Each one explains what I did, what I learned, and links to the work itself.</p>
+  <div class="jump"><a href="#professional-communication">Professional communication</a><a href="#research">Research</a><a href="#health-advocacy-and-outreach">Health advocacy and outreach</a></div>
+
+  <section id="professional-communication">
+    <h2>Professional communication</h2>
+
+    <article class="eow" id="eow-site-tours">
+      <div class="meta"><b>Ignited Education</b>Program Logistics and Communications Intern<br>Jan 2026 to June 2026</div>
+      <div>
+        <h3>Connecting Teachers to Local Science Workplaces Through Site Tours</h3>
+        <p>As a logistics and communications intern with Ignited Education, I coordinate site tours that bring teachers into science and technology workplaces so they can see the careers their students might one day pursue. The tours are part of programs such as Bioeconomy Week, Science in the City, and Semiconductor Week. I contact host organizations, including the University of Washington&rsquo;s Institute for Protein Design and Heirloom Carbon, to settle dates and tour plans, then write the emails and internal updates that keep my managers and hosts working from the same information.</p>
+        <p>Most students never see the inside of a laboratory or a biotechnology company, and their teachers often have not either. When a teacher walks through a real workplace and meets the people in it, that picture travels back to a classroom and shapes who students believe belongs in science and health fields. Because I handle the details, scientists can spend their time on the tour itself instead of on scheduling.</p>
+        <p>I learned to write messages that a busy reader can act on in one pass: the date and time first, then the location, then what the person needs to do. I also learned to anticipate questions before they are asked, such as parking, building access, and group size, since each unanswered question costs a host or teacher another round of email. I now use the same habit when I draft workshop reminders for students and families, and when I explain my research to people outside engineering.</p>
+        <p>With a fellow intern, I produced a poster summarizing the program&rsquo;s reach. I also co-wrote a LinkedIn post to share what teachers took away from the visits. My own takeaway is that clear logistics are a form of respect for other people&rsquo;s time, and that respect is what makes partners say yes again.</p>
+      </div>
+    </article>
+
+    <article class="eow" id="eow-radio-script">
+      <div class="meta"><b>WERC and L&amp;I</b>Radio Script Internship, UW School of Public Health<br>Sept 2025 to Dec 2025</div>
+      <div>
+        <h3>Turning Grocery Workers&rsquo; Voices Into a Back Health Radio Program</h3>
+        <p>In fall 2025, I led the early development of a radio script on musculoskeletal health for grocery workers, through an internship connected to the Work Equity Research Center (WERC), part of the Washington State Department of Labor and Industries (L&amp;I), and the UW School of Public Health. Musculoskeletal disorders are injuries to muscles, joints, and the spine, and they are common in jobs with repetitive lifting and long hours on your feet. Occupational health guidance is usually written for researchers and managers, not the people doing the lifting. Audio can reach workers on a break or on the drive home, but only if it sounds like it was written for them.</p>
+        <p>I was asked to build a three-segment educational program from nothing, so I started by listening. I interviewed more than 20 frontline grocery employees about their daily tasks, what hurts by the end of a shift, and what safety advice they had already heard. I then rewrote ergonomic best practices from occupational medicine evidence as short, spoken advice. Writing for the ear meant one idea per sentence, no jargon, and a closing action in every segment. The interviews decided which tips stayed, because advice that ignores how a store really runs tends to be ignored. I also practiced turning evidence into behavior change messaging, the core of health communication. I now hold all my writing, from scripts to workshop slides to program emails, to one standard: a message is not finished until the person it is meant for can act on it.</p>
+        <p>The finished script gave WERC a draft that fit its broader product strategy.</p>
+        <div class="art"><div class="ty">Artifact</div><a href="https://docs.google.com/document/d/1KXjMo9ul7aGWfGmn3oeqR8XNvGMqezvio2ixHFC807g/edit?tab=t.t2gvqli8lbk8" target="_blank" rel="noopener">Radio Script for Grocery Store Workers</a><p>The script shows the plain-language, one-action-per-segment writing I developed from worker interviews.</p></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <article class="eow" id="eow-microfluidics">
+      <div class="meta"><b>Yang Lab</b>UW Materials Science and Engineering<br>March 2026 to present</div>
+      <div>
+        <h3>Designing Microfluidic Devices to Capture Single Cancer Cells</h3>
+        <p>I am a research assistant in the Yang Lab in the University of Washington&rsquo;s Department of Materials Science and Engineering. I first joined in Spring 2026. Our project focuses on circulating tumor cells, which are cancer cells that break away from a tumor and travel through the blood. They are rare, and studying them one at a time could reveal how cancer spreads. My goal is to design microfluidic devices, chips with channels thinner than a hair, that catch individual cells as fluid flows through them.</p>
+        <p>I adjust the shape and size of the channels to improve how reliably a single cell is trapped, and I use simulation software to model how pressure drives fluid through each design. These simulations let us test ideas before fabrication, which saves materials and weeks of lab time. I learned to treat each design as a hypothesis, to question what the model assumes, and to explain technical results to people outside engineering.</p>
+        <p>Testing every design by simulation is slow, so I am now developing a follow-up project, approved by my principal investigator, that trains a faster computer model on simulation results to suggest trap shapes automatically. This connects my wet lab and computational interests, and it is the direction I want my graduate research to take.</p>
+        <p>The work matters to public health because tools that make cancer biology measurable can eventually change how disease is understood and detected. It also taught me that careful, early testing is a form of stewardship over limited resources, a lesson I carry into my data and program work.</p>
+      </div>
+    </article>
+
+    <article class="eow" id="eow-lipid">
+      <div class="meta"><b>Lampe Lab</b>Fred Hutchinson Cancer Center<br>Aug 2025 to Feb 2026</div>
+      <div>
+        <h3>Finding Diet-Related Lipid Signatures in a Colorectal Cancer Prevention Trial</h3>
+        <p>From August 2025 to February 2026, I was a research assistant in the Lampe Lab at the Fred Hutchinson Cancer Center, analyzing data from a randomized controlled crossover trial. In a crossover trial, every participant receives each intervention in turn, so people serve as their own comparison. More than 100 older, healthy adults took fish oil and fermentable fiber supplements, and I helped test how those supplements changed the lipids (fats) and aqueous metabolites (small water-soluble molecules made during metabolism) in their blood. These are biomarkers of colorectal cancer risk. Colorectal cancer is common, and diet is one of the few risk factors people can change. If we can show which dietary changes shift blood biomarkers, prevention advice can rest on measured evidence instead of guesses.</p>
+        <p>I worked with measurements of 1,444 lipids and 372 aqueous metabolites. With that many measurements, some will look significant by chance alone, so I used linear mixed models, which handle repeated measurements from the same person, and adjusted for covariates. I applied Benjamini-Hochberg false discovery rate correction, a method that limits how many false findings slip through. I then used principal component analysis and linear discriminant analysis, two methods for summarizing patterns, to see whether lipid patterns could tell the dietary interventions apart. I learned to ask what a result would look like if nothing were really happening before getting excited about it. I also learned that a result only helps if collaborators can follow it, so I presented our findings as the talk &ldquo;Ceramides and Gut Health&rdquo; to audiences at Fred Hutch and Texas A&amp;M.</p>
+        <p>The analysis now supports a manuscript in preparation. <a href="index.html#/publications/pub-lipidome">See it under Publications</a>.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="health-advocacy-and-outreach">
+    <h2>Health advocacy and outreach</h2>
+
+    <article class="eow" id="eow-college-access">
+      <div class="meta"><b>Dream Project</b>Decatur High School, Federal Way School District<br>Sept 2026 to present</div>
+      <div>
+        <h3>Helping High School Students Navigate College and Financial Aid Applications</h3>
+        <p>Since September 2026, I have served as a College and Career Readiness Assistant with the Dream Project, a University of Washington program that supports high school students on their path to college. I am placed at Decatur High School in the Federal Way School District. My goal is to help students and their families get through the application process with fewer barriers. I lead workshops on the Free Application for Federal Student Aid (FAFSA) and the Washington Application for State Financial Aid (WASFA), the state form for students who cannot file the FAFSA, and I help seniors complete their college applications.</p>
+        <p>Education is one of the strongest social determinants of health, meaning a condition in people&rsquo;s lives that shapes health outcomes long before they reach a clinic. Cost and confusing paperwork keep many capable students from applying at all, so helping a student finish a financial aid form is a concrete way to widen access to opportunities linked to longer, healthier lives.</p>
+        <p>I learned to turn dense instructions into clear steps, to check understanding without making a student feel judged, and to plan workshops so families with different levels of familiarity with the system can all follow along. Information only helps when the reader can use it, a lesson I also apply when I write for teachers in my internship and for non-scientists when I describe my research.</p>
+        <p>The most direct impact is on individual students: a completed application is a door that stays open. Next, I am proposing a speaker and mentorship project at Decatur, with my site supervisor as mentor, that would connect students with people working in health and science careers.</p>
+      </div>
+    </article>
+
+    <article class="eow" id="eow-street-medicine">
+      <div class="meta"><b>U-District Street Medicine</b>Co-Director of Education<br>Sept 2025 to present</div>
+      <div>
+        <h3>Bringing Health Resources to People Experiencing Homelessness Through Street Medicine</h3>
+        <p>Since September 2025, I have served as Co-Director of Education for U-District Street Medicine, a group that supports people experiencing homelessness in Seattle&rsquo;s University District. I lead a team of 40 and focus on health education, which means deciding what people need to know and how to get it to them in a form they will use. Housing is a major social determinant of health, meaning a condition in daily life that shapes health long before anyone sees a clinician. People without housing often do not know which services exist or how to reach them, and information that is hard to read or hard to find does little good.</p>
+        <p>Two projects shaped my role. First, we built a community resource podcast from scratch, and I worked with the team to define the audience, set a content roadmap, and plan how episodes would be distributed. Second, I designed a street medicine resource pamphlet. A printed pamphlet works without a phone or data plan, and a podcast reaches people who engage with audio, so the two formats cover different needs. Coordinating 40 people taught me to break a large goal into pieces that individual team members can own and finish. The pamphlet taught me that a first draft is a hypothesis: asking readers what confused them improved it more than polishing on my own. I plan to carry that habit of testing materials with their intended audience into my public health work.</p>
+        <p>The pamphlet has been handed out to more than 200 people experiencing homelessness, and I revised it based on feedback from the people who received it.</p>
+        <div class="art"><div class="ty">Artifact</div><a href="https://canva.link/pqz8w8qhgkbsnpk" target="_blank" rel="noopener">Street Medicine Resource Guide</a><p>The resource guide I designed, showing the layout and plain-language content handed out to more than 200 people.</p></div>
+      </div>
+    </article>
+  </section>
   <footer>Seattle, WA. <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="Karthikeya_Kusuma_CV.pdf" target="_blank" rel="noopener">CV</a></footer>
 </div>
-<script>
-/* To add an artifact, add one object to ITEMS.
-   c: "professional-communication" | "research" | "health-advocacy-and-outreach"
-   ty: label such as "Poster", "Talk", "Pamphlet", "Paper"
-   t: title, d: one or two sentences, m: small line (venue, date), u: link (file in this repo or URL) */
-var ITEMS = [
-];
-
-var CATS = [
- {id:"professional-communication",name:"Professional communication"},
- {id:"research",name:"Research"},
- {id:"health-advocacy-and-outreach",name:"Health advocacy and outreach"}
-];
-function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
-var jump="",out="";
-CATS.forEach(function(c){
-  jump+='<a href="#'+c.id+'">'+esc(c.name)+'</a>';
-  var cards=ITEMS.filter(function(i){return i.c===c.id;}).map(function(i){
-    var inner='<div class="ty">'+esc(i.ty)+'</div><div class="ct">'+esc(i.t)+'</div><p class="cd">'+esc(i.d)+'</p>'+(i.m?'<div class="cm">'+esc(i.m)+'</div>':'');
-    return i.u?'<a class="card" href="'+esc(i.u)+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
-  }).join("");
-  out+='<section id="'+c.id+'"><h2>'+esc(c.name)+'</h2>'+(cards?'<div class="grid">'+cards+'</div>':'<p class="empty">Items are being added.</p>')+'</section>';
-});
-document.getElementById("jump").innerHTML=jump;
-document.getElementById("out").innerHTML=out;
-</script>
 </body>
 </html>
