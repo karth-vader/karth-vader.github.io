@@ -115,8 +115,8 @@ section h2{margin-top:0}
   <div class="sub2x">Featured work showcase</div>
   <div class="idx">
     <div><b>Professional communication</b><ul><li><a href="#eow-site-tours">Connecting Teachers to Local Science Workplaces Through Site Tours</a></li><li><a href="#eow-radio-script">Turning Grocery Workers&rsquo; Voices Into a Back Health Radio Program</a></li></ul></div>
-    <div><b>Research</b><ul><li><a href="#eow-microfluidics">Designing Microfluidic Devices to Capture Single Cancer Cells</a></li><li><a href="#eow-lipid">Finding Diet-Related Lipid Signatures in a Colorectal Cancer Prevention Trial</a></li></ul></div>
-    <div><b>Health advocacy and outreach</b><ul><li><a href="#eow-college-access">Helping High School Students Navigate College and Financial Aid Applications</a></li><li><a href="#eow-street-medicine">Bringing Health Resources to People Experiencing Homelessness Through Street Medicine</a></li></ul></div>
+    <div><b>Research</b><ul><li><a href="#eow-microfluidics">Designing Microfluidic Devices to Capture Single Cancer Cells</a></li></ul></div>
+    <div><b>Health advocacy and outreach</b><ul><li><a href="#eow-college-access">Helping High School Students Navigate College and Financial Aid Applications</a></li></ul></div>
   </div>
   <div class="jump" id="jump"></div>
   <div id="out"></div>
@@ -173,11 +173,12 @@ section h2{margin-top:0}
 <script src="showcase.js"></script>
 <script>
 (function(){
-  var G=[["computation","Computation and ML"],["research","Health research"],["clinical","Clinical work"],["outreach","Education and outreach"],["leadership","Communication and leadership"],["projects","Projects"]];
+  var G=[["computation","Computation and ML"],["research","Health research"],["clinical","Clinical"],["outreach","Education and outreach"],["leadership","Communication and leadership"]];
+  var HIDE={"act-research-assistant-lampe-lab-aug-2025":1,"act-co-director-of-education-u-district-street-medicine-sep-2025":1};
   var jump="",out="";
   function block(e,when){
-    var h='<article class="eow'+(e.pf||SC[e.id]?'':' blank')+'" id="'+e.id+'"><div class="meta">'+when+'</div><div><h3>'+e.t+'</h3>'+(e.o?'<p class="org">'+e.o+'</p>':'');
-    if(e.pf){
+    var h='<article class="eow'+((e.pf&&!HIDE[e.id])||SC[e.id]?'':' blank')+'" id="'+e.id+'"><div class="meta">'+when+'</div><div><h3>'+e.t+'</h3>'+(e.o?'<p class="org">'+e.o+'</p>':'');
+    if(e.pf&&!HIDE[e.id]){
       var t=document.getElementById("tpl-"+e.pf);
       h+='<div class="sc" id="'+e.pf+'"><div class="tag">Work showcase: '+t.getAttribute("data-cat")+'</div>'+t.innerHTML+'</div>';
     } else if(SC[e.id]){
@@ -189,10 +190,12 @@ section h2{margin-top:0}
     return h+'</div></article>';
   }
   G.forEach(function(g){
-    var items=g[0]==="projects"?P.map(function(p){return {id:p.id,t:p.t,o:p.k,d:"2026"};}):E.filter(function(e){return e.c===g[0];});
-    if(!items.length) return;
+    var items=E.filter(function(e){return e.c===g[0];});
+    if(g[0]==="clinical") items.sort(function(a,b){return (b.hrs||0)-(a.hrs||0);});
+    var extra="";
+    if(g[0]==="computation") extra='<div class="sub2x">Projects</div>'+P.map(function(q){return block({id:q.id,t:q.t,o:q.k},"2026");}).join("");
     jump+='<a href="#g-'+g[0]+'">'+g[1]+'</a>';
-    out+='<section id="g-'+g[0]+'"><h2>'+g[1]+'</h2>'+items.map(function(e){return block(e,e.d);}).join("")+'</section>';
+    out+='<section id="g-'+g[0]+'"><h2>'+g[1]+'</h2>'+items.map(function(e){return block(e,e.d);}).join("")+extra+'</section>';
   });
   document.getElementById("jump").innerHTML=jump;
   document.getElementById("out").innerHTML=out;

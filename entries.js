@@ -32,7 +32,7 @@ var E = [
  {c:"outreach",s:"Sep 2025",d:"Sept 2025 – March 2026",t:"Co-Director of Education, U-District Street Medicine",pf:"eow-street-medicine",o:"Seattle, WA",b:[
   "Led a cross-functional team of 40 to build a community resource podcast from scratch, defining audience, content roadmap, and distribution strategy",
   "Designed a street-medicine resource pamphlet distributed to 200+ individuals experiencing homelessness, integrating user feedback to improve clarity and usability"]},
- {c:"outreach",s:"Sep 2025",d:"Sept 2025 – Present",t:"Member, Active Minds",o:"UW Seattle",b:[
+ {c:"outreach",s:"Sep 2025",d:"Sept 2025 – March 2026",t:"Member, Active Minds",o:"UW Seattle",b:[
   "Co-led mental health awareness initiatives and planned community engagement events including a therapy dog de-stress event for students"]},
  {c:"outreach",s:"Sep 2025",d:"Sept 2025 – Dec 2025",t:"Volunteer Math Tutor",o:"Washington Middle School. Seattle, WA",b:[
   "Tutored 6th-grade students in math for 50 volunteer hours over the quarter, adapting explanations to each student's level to reinforce foundational skills and build confidence"]},
